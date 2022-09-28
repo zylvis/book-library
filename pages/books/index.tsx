@@ -88,7 +88,11 @@ const Books = () => {
       BookId: id
     }
     AddReservePost(obj);
-    window.location.reload();
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 500)
+    
   }
 
   const handleBorrowingButton = (event:any, id:number) => {
@@ -96,7 +100,10 @@ const Books = () => {
       BookId: id
     }
     AddBorrowingPost(obj);
-    window.location.reload();
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 500)
   }
 
   const handleSearchData = (data : IBookGet[]) => {
@@ -108,7 +115,8 @@ const Books = () => {
   return (
     <>
     <Header/>
-    <SearchBooks {...searchObj}/>
+    <div className={styles.labeltxt}>Book list</div>
+    <div className={styles.search}><SearchBooks {...searchObj}/></div>
     <div className={styles.container}>
       <table className={styles["container-items"]}>
         <thead>
@@ -120,6 +128,7 @@ const Books = () => {
             <th className={styles.border}>Genre</th>
             <th className={styles.border}>Publisher</th>
             <th className={styles.border}>ISBN</th>
+            <th className={styles.border}>Available</th>
             <th className={styles.border}></th>
             <th className={styles.border}></th>
           </tr>
@@ -148,6 +157,7 @@ const Books = () => {
                 <td className={styles.bookitem}>
                   {item.isbn}
                 </td>
+                <td className={styles.bookitem}>{item.availableStatus}</td>
                 <td className={styles.bookitem}>
                   <button style={item.availableStatus == "Unavailable" ? {pointerEvents: "none", backgroundColor: "red"} : {pointerEvents: "auto", backgroundColor: "green"}} onClick={(event) => handleBorrowingButton(event, item.id)}>
                     Borrow

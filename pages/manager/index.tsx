@@ -4,6 +4,8 @@ import router from "next/router";
 import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import DateToSimple from "../../helpers/DateToSimple"
+import RegisteredList from "../../components/RegisteredList";
+import Modal from "../../components/Modal";
 
 interface IBorrowing{
   id: number,
@@ -13,10 +15,15 @@ interface IBorrowing{
   date: string
 }
 
+interface IRegisterObj{
+  userId: string,
+  bookId: number
+}
+
 const Manager = () => {
 
   const [dataToShow, setDataToShow] = useState<IBorrowing[]>([]);
-   const [borrowingId, setBorrowingId] = useState<number>(0);
+  const [showRegisteredList, setShowRegisteredList] = useState(false);
 
   useEffect(() => {
       const token = localStorage.getItem('accessToken')?.toString();
@@ -40,10 +47,22 @@ const Manager = () => {
       getData();
     }, [])
 
+    const clientRegister = axios.create({
+      baseURL: "https://localhost:7033/api/ReturnRegisterAPI" 
+    });
+  
+    const AddRegisterPost = (registerObj: IRegisterObj) => {
+      clientRegister
+         .post('', registerObj)
+         .then((response) => {
+            console.log(response.data)  
+         }).catch((error) => {
+            console.log(error);
+       });
+    };
 
-
-    const handlingDelete = (id:number) => {
-
+    const handlingDelete = (id:number, userId: string, bookId: number) => {
+        console.log(bookId)
       axios.delete(`https://localhost:7033/api/BorrowingAPI/${id}`)  
       .then(res => {  
         console.log(res.data); 
@@ -52,12 +71,24 @@ const Manager = () => {
       }).catch( error =>
         console.log(error)
       )
+
+      AddRegisterPost({userId, bookId});
     }
+
+    const showListHandler = (show:boolean) =>{
+      setShowRegisteredList(show)
+    }
+
+    const regListObj = {show: showRegisteredList, showListHandler: showListHandler}
       
     return (
       <>
+      
+      <RegisteredList {...regListObj}/>
+      {showRegisteredList && <Modal/>}
         <Header/>
-        <button className={styles.btnregister}>Register Books</button>
+        <button className={styles.btnregistered} onClick={()=>setShowRegisteredList(true)}>Return Register List</button>
+        <div className={styles.labeltxt}>Borrowed book list</div>
         <div className={styles.container}>
           <table className={styles["container-items"]}>
             <thead>
@@ -89,7 +120,7 @@ const Manager = () => {
                       {DateToSimple(item.date)}
                     </td>
                     <td className={styles.item}>
-                      <button onClick={()=> handlingDelete(item.id)}>Delete</button>
+                      <button onClick={()=> handlingDelete(item.id, item.userID, item.bookID)}>Register</button>
                     </td>
                   </tr>
                 );

@@ -1,12 +1,8 @@
 
 .container {
-
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
-
 }
 
 .container-items{
@@ -27,11 +23,17 @@
     font-size: 0.6rem;;
 }
 
-.btnregister{
+.btnregistered{
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+.labeltxt{
+    display: block;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: 700;
 }

@@ -16,10 +16,12 @@
 }
 
 .ibooklibrary-label{
+    position: absolute;
     display: inline-block;
+    bottom: 2.5vh;
     cursor: pointer;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #0D659D;
 }
 
