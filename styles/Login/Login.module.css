@@ -1,0 +1,38 @@
+.container{
+    position: absolute;
+    background-color: #2E3B3C;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #DBF3F4;
+}
+
+.formcontainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    margin-top: 6rem;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.login-label{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#roundedcorners{
+    border-radius: 5px;
+    height: 1.5rem;
+}
+
+.button{
+    width: 5rem;
+    margin: 0.5rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}

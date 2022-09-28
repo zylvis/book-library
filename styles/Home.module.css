@@ -1,3 +1,11 @@
 .container {
+  height: 100vh;
   color: black;
+  background-color: #2E3B3C;
+}
+
+.navbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
