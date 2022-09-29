@@ -75,7 +75,7 @@ const Register = () => {
         },
         validate,
         onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2));
+            //alert(JSON.stringify(values, null, 2));
             AddPost(values)
             formik.resetForm();
             if (!isSuccess) {
