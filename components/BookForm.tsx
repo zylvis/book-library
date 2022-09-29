@@ -27,7 +27,7 @@ interface IBookFormProps{
 
 const BookForm =(props: IBookFormProps) => {
 
-    const [success, setSuccess] = useState("Success");
+    const [success, setSuccess] = useState("");
 
     const client = axios.create({
         baseURL: "https://localhost:7033/api/BookAPI" 
