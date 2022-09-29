@@ -128,7 +128,7 @@ const Books = () => {
             <th className={styles.border}>Genre</th>
             <th className={styles.border}>Publisher</th>
             <th className={styles.border}>ISBN</th>
-            <th className={styles.border}>Available</th>
+            <th className={styles.border}>Availability</th>
             <th className={styles.border}></th>
             <th className={styles.border}></th>
           </tr>

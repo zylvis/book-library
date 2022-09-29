@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import DateToSimple from "../../helpers/DateToSimple"
 import RegisteredList from "../../components/RegisteredList";
 import Modal from "../../components/Modal";
+import BookForm from "../../components/BookForm";
 
 interface IBorrowing{
   id: number,
@@ -24,6 +25,7 @@ const Manager = () => {
 
   const [dataToShow, setDataToShow] = useState<IBorrowing[]>([]);
   const [showRegisteredList, setShowRegisteredList] = useState(false);
+  const [showBookForm, setShowBookForm] = useState(false)
 
   useEffect(() => {
       const token = localStorage.getItem('accessToken')?.toString();
@@ -79,15 +81,22 @@ const Manager = () => {
       setShowRegisteredList(show)
     }
 
+    const bookFormHandler = (show:boolean) =>{
+      setShowBookForm(show)
+    }
+
     const regListObj = {show: showRegisteredList, showListHandler: showListHandler}
+    const bookFormObj = {bookFormHandler: bookFormHandler}
       
     return (
       <>
-      
-      <RegisteredList {...regListObj}/>
-      {showRegisteredList && <Modal/>}
+        {showBookForm && <BookForm {...bookFormObj}/>}
+        {showBookForm && <Modal/>}
+        <RegisteredList {...regListObj}/>
+        {showRegisteredList && <Modal/>}
         <Header/>
         <button className={styles.btnregistered} onClick={()=>setShowRegisteredList(true)}>Return Register List</button>
+        <button onClick={() => setShowBookForm(true)}>Add Book</button>
         <div className={styles.labeltxt}>Borrowed book list</div>
         <div className={styles.container}>
           <table className={styles["container-items"]}>

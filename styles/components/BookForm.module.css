@@ -1,0 +1,50 @@
+.container{
+    position: absolute;
+    background-color: #2E3B3C;
+    z-index: 2;
+    top: 10vh;
+    bottom: 10vh;
+    right: 30vw;
+    left: 30vw;
+    color: #DBF3F4;
+}
+
+.formcontainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2vh;
+    gap: 0.25rem;
+    font-weight: 600;
+}
+
+.label{
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.roundedcorners{
+    border-radius: 5px;
+    height: 0.7rem;
+    font-size: 0.6rem;;
+}
+
+.error{
+    height: 0.3rem;
+    font-size: 0.3rem;;
+    color: rgb(236, 102, 102);
+}
+
+.button{
+    width: 5rem;
+    margin: 0.5rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.success{
+    color:  rgb(42, 161, 42);
+    font-size: 0.75rem;
+}
