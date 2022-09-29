@@ -95,7 +95,7 @@ const Manager = () => {
         <RegisteredList {...regListObj}/>
         {showRegisteredList && <Modal/>}
         <Header/>
-        <button className={styles.btnregistered} onClick={()=>setShowRegisteredList(true)}>Return Register List</button>
+        <button className={styles.btnregistered} onClick={()=>setShowRegisteredList(true)}>Returned books list </button>
         <button onClick={() => setShowBookForm(true)}>Add Book</button>
         <div className={styles.labeltxt}>Borrowed book list</div>
         <div className={styles.container}>
@@ -129,7 +129,7 @@ const Manager = () => {
                       {DateToSimple(item.date)}
                     </td>
                     <td className={styles.item}>
-                      <button onClick={()=> handlingDelete(item.id, item.userID, item.bookID)}>Register</button>
+                      <button onClick={()=> handlingDelete(item.id, item.userID, item.bookID)}>Register / Return</button>
                     </td>
                   </tr>
                 );

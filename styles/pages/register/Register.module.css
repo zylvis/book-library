@@ -1,19 +1,19 @@
 .container{
     position: absolute;
-    background-color: #2E3B3C;
+    background-color: #CBE7E8;
     z-index: 2;
     top: 10vh;
     bottom: 10vh;
     right: 30vw;
     left: 30vw;
-    color: #DBF3F4;
+    color:#2E3B3C;
 }
 
 .formcontainer{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 2vh;
+    margin-top: 7vh;
     gap: 0.25rem;
     font-weight: 600;
 }
@@ -47,4 +47,10 @@
 .success{
     color:  rgb(42, 161, 42);
     font-size: 0.75rem;
+}
+
+.register{
+    margin-top: 10vh;
+    display: block;
+    text-align: center;
 }

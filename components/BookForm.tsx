@@ -105,10 +105,6 @@ const BookForm =(props: IBookFormProps) => {
         },
     });
 
-    setTimeout(() => {
-        <div>Success</div>
-      }, 1000);
-
     return (
         <div className={styles.container}>
             <form className={styles.formcontainer} onSubmit={formik.handleSubmit}>

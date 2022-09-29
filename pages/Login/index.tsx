@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Link from 'next/link';
 import Router from 'next/router';
 import { NextPage } from 'next/types';
 import { useState } from 'react';
@@ -34,9 +35,13 @@ const client = axios.create({
 
        }).catch((error) => {
         console.log(error);
-        //props.loginHandler(!false);
-        setErrorMessage(error.response.data.errorMesseges[0]);
-        console.log(error.response.data.errorMesseges[0]);
+        if(error.code =="ERR_NETWORK"){
+            setErrorMessage("Network error")
+        } else {
+            setErrorMessage(error.response.data.errorMesseges[0]);
+            console.log(error.response.data.errorMesseges[0]);
+        }
+
      });
   };
 
@@ -65,6 +70,7 @@ const login =
             <div>
                 <button className={styles.button} type="submit">OK</button>
             </div>
+            <Link href="/register"><div className={styles.register}>Click to Register</div></Link>
         </form>
     </div>
 
