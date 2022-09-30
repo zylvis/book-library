@@ -1,57 +1,57 @@
-.container{
-    position: absolute;
-    background-color: #2E3B3C;
-    z-index: 2;
-    top: 11vh;
-    bottom: 10vh;
-    right: 30vw;
-    left: 30vw;
-    color: #DBF3F4;
+.container {
+  position: absolute;
+  background-color: #2e3b3c;
+  z-index: 2;
+  top: 11vh;
+  bottom: 10vh;
+  right: 30vw;
+  left: 30vw;
+  color: #dbf3f4;
 }
 
-.formcontainer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2vh;
-    height: 100%;
-    gap: 0.5vh;
-    font-weight: 600;
+.formcontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2vh;
+  height: 100%;
+  gap: 0.5vh;
+  font-weight: 600;
 }
 
-.label{
-    font-size: 1.5vh;
-    font-weight: 600;
-    text-align: center;
+.label {
+  font-size: 1.5vh;
+  font-weight: 600;
+  text-align: center;
 }
 
-.roundedcorners{
-    border-radius: 5px;
-    height: 2vh;
-    width: 14vw;
-    font-size: 1vh;
+.roundedcorners {
+  border-radius: 5px;
+  height: 2vh;
+  width: 14vw;
+  font-size: 1vh;
 }
 
-.error{
-    height: 1.5vh;
-    font-size: 1.5vh;
-    color: rgb(236, 102, 102);
+.error {
+  height: 1.5vh;
+  font-size: 1.5vh;
+  color: rgb(236, 102, 102);
 }
 
-.button{
-    width: 40px;
-    margin: 0.5vw;;
-    height: 20px;
-    border-radius: 5px;
-    border: 1px solid black;
+.button {
+  width: 40px;
+  margin: 0.5vw;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
-.success{
-    color:  rgb(42, 161, 42);
-    font-size: 0.75rem;
+.success {
+  color: rgb(42, 161, 42);
+  font-size: 0.75rem;
 }
-.addbook{
-    text-align: center;
-    margin-top: 2vh;
-    font-size: 2.5vh;
+.addbook {
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 2.5vh;
 }

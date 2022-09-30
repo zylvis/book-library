@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Link from 'next/link';
 import Router from 'next/router';
-import { NextPage } from 'next/types';
 import { useState } from 'react';
 import styles from '../../styles/Login/Login.module.css'
 
@@ -48,17 +47,12 @@ const client = axios.create({
      });
   };
 
-
-
-
 const formHandler =(event:any) => {
 
     event.preventDefault();
     AddPost(userName, password);
     setUserName("");
     setPassword("");
-    
-
 }
 
 const login = 
@@ -76,7 +70,6 @@ const login =
             <Link href="/register"><div className={styles.register}>Click to Register</div></Link>
         </form>
     </div>
-
 
     return(
         <>

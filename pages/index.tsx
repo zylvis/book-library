@@ -29,16 +29,16 @@ const Home: NextPage = () => {
 
   return (
     <>
-    {showLogin && <Login {...objLogin} />}
-    <div className={styles.container}>
-      
-      <Header />
-      <div className={styles.navbutton}>
-        <Link  href="/books">
-          <button className={styles.books}>Books</button>
-        </Link>
+      {showLogin && <Login {...objLogin} />}
+      <div className={styles.container}>
+        
+        <Header />
+        <div className={styles.navbutton}>
+          <Link  href="/books">
+            <button className={styles.books}>Books</button>
+          </Link>
+        </div>
       </div>
-    </div>
     </>
   )
 }

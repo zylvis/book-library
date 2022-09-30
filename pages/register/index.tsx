@@ -86,47 +86,47 @@ const Register = () => {
 
     return (
         <>
-        <div className={styles.container}>
-            <div className={styles.register}> Register </div>
-            <form className={styles.formcontainer} onSubmit={formik.handleSubmit}>
+            <div className={styles.container}>
+                <div className={styles.register}> Register </div>
+                <form className={styles.formcontainer} onSubmit={formik.handleSubmit}>
 
-                <label className={styles.label} htmlFor="name">Name</label>
-                <input
-                    className={styles.roundedcorners}
-                    id="name"
-                    name="name"
-                    type="text"
-                    onChange={formik.handleChange}
-                    value={formik.values.name}
-                />
-                {formik.errors.name ? <div className={styles.error}>{formik.errors.name}</div> : <div className={styles.error}></div>}
+                    <label className={styles.label} htmlFor="name">Name</label>
+                    <input
+                        className={styles.roundedcorners}
+                        id="name"
+                        name="name"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.name}
+                    />
+                    {formik.errors.name ? <div className={styles.error}>{formik.errors.name}</div> : <div className={styles.error}></div>}
 
-                <label className={styles.label} htmlFor="title">Username</label>
-                <input
-                    className={styles.roundedcorners}
-                    id="username"
-                    name="username"
-                    type="text"
-                    onChange={formik.handleChange}
-                    value={formik.values.username}
-                />
-                {formik.errors.username ? <div className={styles.error}>{formik.errors.username}</div> : <div className={styles.error}></div>}
+                    <label className={styles.label} htmlFor="title">Username</label>
+                    <input
+                        className={styles.roundedcorners}
+                        id="username"
+                        name="username"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.username}
+                    />
+                    {formik.errors.username ? <div className={styles.error}>{formik.errors.username}</div> : <div className={styles.error}></div>}
 
-                <label className={styles.label} htmlFor="isbn">Password</label>
-                <input
-                    className={styles.roundedcorners}
-                    id="password"
-                    name="password"
-                    type="text"
-                    onChange={formik.handleChange}
-                    value={formik.values.password}
-                />
-                {formik.errors.password ? <div className={styles.error}>{formik.errors.password}</div> : <div className={styles.error}></div>}
+                    <label className={styles.label} htmlFor="isbn">Password</label>
+                    <input
+                        className={styles.roundedcorners}
+                        id="password"
+                        name="password"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.password}
+                    />
+                    {formik.errors.password ? <div className={styles.error}>{formik.errors.password}</div> : <div className={styles.error}></div>}
 
-                <span><button className={styles.button} type="submit">Submit</button>&nbsp;<button className={styles.button} type="button" onClick={()=> router.push("/login")}>Cancel</button></span>
-                <div className={styles.success} style={isSuccess ? {color: "green"} : {color: "red"}}>{success}</div>
-            </form>
-        </div>
+                    <span><button className={styles.button} type="submit">Submit</button>&nbsp;<button className={styles.button} type="button" onClick={()=> router.push("/login")}>Cancel</button></span>
+                    <div className={styles.success} style={isSuccess ? {color: "green"} : {color: "red"}}>{success}</div>
+                </form>
+            </div>
         </>
     )
 }

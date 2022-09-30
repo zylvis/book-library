@@ -38,7 +38,7 @@ const SearchBooks: React.FC<ISearch> = (props) =>{
     };
     getData();
     
-  }
+  };
 
   return (
     <div className={styles.container}>

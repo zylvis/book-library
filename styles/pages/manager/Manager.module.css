@@ -1,46 +1,45 @@
-
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container-items{
-    text-align: center;
-    border-collapse: collapse;
-    background-color: #DBF3F4;
-    border: 1px solid #0D659D;
-    width: 100%;
+.container-items {
+  text-align: center;
+  border-collapse: collapse;
+  background-color: #dbf3f4;
+  border: 1px solid #0d659d;
+  width: 100%;
 }
-.item{
-    padding: 2px;;
-    color: white;
-    background-color: #2E3B3C;
-    font-size: 0.4rem;;
-}
-
-.th{
-    font-size: 0.6rem;;
+.item {
+  padding: 2px;
+  color: white;
+  background-color: #2e3b3c;
+  font-size: 0.4rem;
 }
 
-.btnregistered{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-.labeltxt{
-    display: block;
-    text-align: center;
-    font-size: 0.6rem;
-    font-weight: 700;
-    color: #DBF3F4;
+.th {
+  font-size: 0.6rem;
 }
 
-.addbook{
-    height: 20px;
-    width: 50px;;
-    margin-left: 1vh;
+.btnregistered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.labeltxt {
+  display: block;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #dbf3f4;
+}
+
+.addbook {
+  height: 20px;
+  width: 50px;
+  margin-left: 1vh;
 }
