@@ -7,6 +7,7 @@ import DateToSimple from "../../helpers/DateToSimple"
 import RegisteredList from "../../components/RegisteredList";
 import Modal from "../../components/Modal";
 import BookForm from "../../components/BookForm";
+import ParseJWT from "../../helpers/ParseJWT"
 
 interface IBorrowing{
   id: number,
@@ -34,6 +35,13 @@ const Manager = () => {
         delete axios.defaults.headers.common["Authorization"];
         router.push("/login")
       } 
+
+      console.log(ParseJWT(token))
+      const obj = ParseJWT(token)
+      if ( obj.role != "admin"){
+        router.push("/")
+      }
+      
       const getData = async () => {
         try {
           const response = await axios.get(`https://localhost:7033/api/BorrowingAPI`);
