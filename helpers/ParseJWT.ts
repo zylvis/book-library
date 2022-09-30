@@ -1,4 +1,4 @@
-const parseJwt = (token) =>{
+const parseJwt = (token: any) =>{
 
     if (!token) { 
         return; 
