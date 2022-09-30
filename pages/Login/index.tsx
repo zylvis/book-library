@@ -63,7 +63,7 @@ const login =
             <label>User Name</label>
             <input id={styles.roundedcorners} type="text" value={userName} onChange={(event) => setUserName(event.target.value)}></input>
             <label>Password</label>
-            <input id={styles.roundedcorners} type="text" value={password} onChange={(event) => setPassword(event.target.value)}></input>
+            <input id={styles.roundedcorners} type="password" value={password} onChange={(event) => setPassword(event.target.value)}></input>
             <div>
                 <button className={styles.button} type="submit">OK</button>
             </div>
