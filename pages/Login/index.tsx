@@ -31,7 +31,10 @@ const client = axios.create({
             //console.log(response.data.isSuccess)
             localStorage.setItem('accessToken', response.data.result.token);
             //props.loginHandler(!response.data.isSuccess);
-            Router.push("/")
+            setTimeout(() => {
+                Router.push("/")
+            }, 1000)
+            
 
        }).catch((error) => {
         console.log(error);

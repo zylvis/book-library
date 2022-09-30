@@ -1,6 +1,7 @@
 import axios from 'axios'
 import type { NextPage } from 'next'
 import Link from 'next/link'
+import router from 'next/router'
 import { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     if (!token){
       delete axios.defaults.headers.common["Authorization"];
-      setShowLogin(true)
+      router.push("/login")
     } else {
       setShowLogin(false)
     }

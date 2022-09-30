@@ -17,6 +17,10 @@ const Header = () => {
         console.log(ParseJWT(token))
         const obj = ParseJWT(token)
 
+        if (obj == undefined){
+            router.push('/')
+            return;
+        }
         obj.role == "admin" ? setIsAdmin(true) : setIsAdmin(false)
 
     }, []);
