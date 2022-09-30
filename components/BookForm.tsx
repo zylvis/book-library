@@ -107,6 +107,7 @@ const BookForm =(props: IBookFormProps) => {
 
     return (
         <div className={styles.container}>
+            <div className={styles.addbook}>Add Book</div>
             <form className={styles.formcontainer} onSubmit={formik.handleSubmit}>
 
                 <label className={styles.label} htmlFor="author">Author</label>
@@ -175,7 +176,7 @@ const BookForm =(props: IBookFormProps) => {
                 />
                 {formik.errors.genre ? <div className={styles.error}>{formik.errors.genre}</div> : <div className={styles.error}></div>}
 
-                <span><button type="submit">Submit</button>&nbsp;<button onClick={() => props.bookFormHandler(false)} type="button">Cancel</button></span>
+                <span><button className={styles.button} type="submit">Submit</button>&nbsp;<button className={styles.button} onClick={() => props.bookFormHandler(false)} type="button">Cancel</button></span>
                 <div className={styles.success}>{success}</div>
             </form>
         </div>

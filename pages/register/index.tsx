@@ -123,7 +123,7 @@ const Register = () => {
                 />
                 {formik.errors.password ? <div className={styles.error}>{formik.errors.password}</div> : <div className={styles.error}></div>}
 
-                <span><button type="submit">Submit</button>&nbsp;<button type="button" onClick={()=> router.push("/login")}>Cancel</button></span>
+                <span><button className={styles.button} type="submit">Submit</button>&nbsp;<button className={styles.button} type="button" onClick={()=> router.push("/login")}>Cancel</button></span>
                 <div className={styles.success} style={isSuccess ? {color: "green"} : {color: "red"}}>{success}</div>
             </form>
         </div>

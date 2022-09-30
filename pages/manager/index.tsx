@@ -96,7 +96,7 @@ const Manager = () => {
         {showRegisteredList && <Modal/>}
         <Header/>
         <button className={styles.btnregistered} onClick={()=>setShowRegisteredList(true)}>Returned books list </button>
-        <button onClick={() => setShowBookForm(true)}>Add Book</button>
+        <button className={styles.addbook} onClick={() => setShowBookForm(true)}>Add Book</button>
         <div className={styles.labeltxt}>Borrowed book list</div>
         <div className={styles.container}>
           <table className={styles["container-items"]}>

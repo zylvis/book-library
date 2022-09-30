@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       <Header />
       <div className={styles.navbutton}>
         <Link  href="/books">
-          <button id="books">Books</button>
+          <button className={styles.books}>Books</button>
         </Link>
       </div>
     </div>
